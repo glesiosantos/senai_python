@@ -31,3 +31,4 @@ tabelas.update({
 tabelas.setdefault("Manga", 11)
 
 print(f'Atualizar tabela \n{tabelas}')
+
