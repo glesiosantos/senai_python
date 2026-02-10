@@ -9,4 +9,5 @@ count = 0
 print('Usando WHILE')
 while count < len(lista):
     print(lista[count])
-    count = count + 1
+    # count = count + 1
+    count += 1
