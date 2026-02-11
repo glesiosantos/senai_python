@@ -1,10 +1,18 @@
 from endereco import Endereco
 
 class Cliente :
-    def __init__(self, nome, sobrenome, endereco: Endereco):
-        self.nome = nome
+    # def __init__(self, nome, sobrenome, endereco: Endereco):
+    #     self.nome = nome
+    #     self.sobrenome = sobrenome
+    #     self.endereco = endereco
+    
+    def __init__(self, nome: str, sobrenome):
+        self.nome: str = nome
         self.sobrenome = sobrenome
-        self.endereco = endereco
+        self.enderecos: list[Endereco] = []
 
     def nomeCompleto(self):
-        return self.nome +' '+ self.sobrenome    
+        return self.nome +' '+ self.sobrenome 
+
+    def addEndereco(self, endereco: Endereco):
+        self.enderecos.append(endereco)   

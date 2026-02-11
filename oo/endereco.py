@@ -4,3 +4,6 @@ class Endereco:
         self.bairro = bairro
         self.cidade = cidade
         self.uf = uf
+
+    def enderecoCompleto(self): 
+        return f"{self.logradouro} - {self.bairro} - {self.cidade}/{self.uf}"    
