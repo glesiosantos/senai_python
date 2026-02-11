@@ -1,10 +1,10 @@
 import random
 
 continuar = True
-# palavraChave = input('Informe uma palavra ').lower().strip()
+palavraChave = input('Informe uma palavra ').lower().strip()
 
 palavras = ["python", "carro", "computador", "banana", "escola"]
-palavraChave = random.choice(palavras)
+palavraChave = random.choice(palavras).lower().strip()
 
 digitadas = []
 acertos = []
