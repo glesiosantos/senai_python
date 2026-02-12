@@ -1,4 +1,4 @@
-from endereco import Endereco
+from oo.models.endereco import Endereco
 
 class Cliente :
     # def __init__(self, nome, sobrenome, endereco: Endereco):
@@ -16,3 +16,9 @@ class Cliente :
 
     def addEndereco(self, endereco: Endereco):
         self.enderecos.append(endereco)   
+
+    def visualizarEnderecos(self):
+        lista = []
+        for endereco in self.enderecos:
+            lista.append(endereco.enderecoCompleto())    
+        return lista
