@@ -4,7 +4,6 @@ def main():
     loop = True
 
     while loop:
-
         escolhar = int(input("1-Novo Cliente | 2-Lista Cliente | 3-Buscar Cliente: "))
         match escolhar:
             case 1:
