@@ -1,4 +1,4 @@
-frutas = ['Laranja', 'Pera', 'Uva', 'Abacaxi']
+frutas = ['Laranja', 'Pera', 'Uva', 'Abacaxi'] # arrays
 
 # print(f'{frutas[0]} - {frutas[1]}')
 frutas.append('Melão')
