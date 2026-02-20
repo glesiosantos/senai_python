@@ -1,3 +1,5 @@
+from models.cliente import Cliente
+
 def menu():
     print("\n" + "="*30)
     print("      SISTEMA DE VENDAS")
@@ -16,11 +18,14 @@ def main():
 
         match opcao:
             case '1':
-                print('Cadastrar cliente')                
+                cpf = input('Informe CPF: ')
+                nome = input('Informe nome: ')
+                cliente = Cliente(cpf, nome)
+                cliente.salvar()                
             case '2':
                 print('Cadastrar produto')                
             case '3':
-                print('Cadastrar produto')
+                print('Realizar Venda')
             case '0':
                 print('Sair do sistema')
                 continuar = False                
