@@ -1,0 +1,26 @@
+[
+    {
+        "numero": 2,
+        "pessoa": {
+            "nome": "Maria Joaquina",
+            "endereco": {
+                "logradouro": "Rua das Saudades, 1550",
+                "bairro": "São João",
+                "cidade": "Teresina",
+                "estado": "PI"
+            }
+        }
+    },
+    {
+        "numero": 3,
+        "pessoa": {
+            "nome": "Carlos Antônio",
+            "endereco": {
+                "logradouro": "Rua das Liberdade, 250",
+                "bairro": "São Pedro",
+                "cidade": "Teresina",
+                "estado": "PI"
+            }
+        }
+    }
+]

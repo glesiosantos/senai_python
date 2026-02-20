@@ -1,26 +1,34 @@
 from models.conta import Conta
+from models.pessoa import Pessoa
 from models.corrente import ContaCorrente
+from models.endereco import Endereco
+from models.contato import Contato
 
 def main():
 
-    maria = Conta(1,"Maria Alves")
-    maria.depositar(100)
-    maria.depositar(150)
+    endereco = Endereco('Rua das Saudades, 1550', 'São João', 'Teresina', 'PI')
+    contato1 = Contato(86, '98866.5522')
+    contato2 = Contato(86, '98899.6669')
 
-    joao = ContaCorrente(2, "João da Costa", 0.05)
-    maria.tranferir(100, joao)
+    maria= Pessoa('Maria Joaquina', endereco)
+    mariaConta = ContaCorrente(2, maria)
+    mariaConta.depositar(1000)
+    maria.add_contato(contato1)
+    maria.add_contato(contato2)
 
-    tete = ContaCorrente(3, "Maria Tetê", 0.05)
+    mariaConta.salvar_conta()
 
-    joao.depositar(1000)
-    joao.tranferir(200, tete)
+    endereco2 = Endereco('Rua das Liberdade, 250', 'São Pedro', 'Teresina', 'PI')
+    contato3 = Contato(86, '98877.5522')
+    contato4 = Contato(86, '98855.6669')
 
-    print('*'*10)
-    print(f'{maria.visualizarDadosConta()}')
-    print('*'*10)
-    print(f'{joao.visualizarDadosConta()}')
-    print('*'*10)
-    print(f'{tete.visualizarDadosConta()}')
+    carlos= Pessoa('Carlos Antônio', endereco2)
+    carlosConta = ContaCorrente(3, carlos)
+    carlosConta.depositar(1000)
+    carlos.add_contato(contato3)
+    carlos.add_contato(contato4)
+
+    carlosConta.salvar_conta()
 
 if __name__ == "__main__":
     main()
